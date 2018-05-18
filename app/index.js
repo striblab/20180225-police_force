@@ -120,90 +120,90 @@ function chartTrend() {
 chartTrend();
 
 
-function chartCompare() {
-    var padding = {
-        top: 20,
-        right: 60,
-        bottom: 20,
-        left: 60,
-    };
+// function chartCompare() {
+//     var padding = {
+//         top: 20,
+//         right: 60,
+//         bottom: 20,
+//         left: 60,
+//     };
 
-    var chartTrend = c3.generate({
-        bindto: "#chartCompare",
-        padding: padding,
-        data: {
-            x: 'x',
-            // xFormat: '%Y-%m-%d %H:%M:%S',
-            columns: [
-                ['x', 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-                // ['Rate',100.4956545,92.80404871,79.66950966,79.59245596,74.20189819,54.17179711,66.22293085,56.95042699,63.470021,50.68743188],
-                ['Rate', 46.15355984, 41.0880911, 36.23073357, 35.51637682, 31.86244299, 24.51238273, 27.52961754, 24.19280834, 27.39899681, 22.24469161, null],
-            ],
-            type: 'bar',
-            labels: {
-                format: {
-                    // 'Rate': d3.format(',.1f')
-                }
-            }
-        },
-        legend: {
-            show: false
-        },
-        point: {
-            show: true,
-            r: function(d) { if (d.x == 2017) { return 6;} else { return 2.5; } }
-        },
-        color: {
-            pattern: ['#3580A3']
-        },
-        axis: {
-            rotated: true,
-            y: {
-                max: 1,
-                min: 0,
-                padding: {
-                    bottom: 0,
-                    top: 0
-                },
-                tick: {
-                    count: 6,
-                    values: [0, 0.25, 0.50, 0.75, 1],
-                    format: d3.format('%.0f')
-                }
-            },
-            x: {
-                type: 'category',
-                padding: {
-                    right: 0,
-                    left: 0
-                },
-                tick: {
-                    count: 4,
-                    values: [2008, 2011, 2015, 2018],
-                    multiline: false,
-                }
-            }
-        },
-        grid: {
-            focus:{
-                show:false
-              },
-          },
-      tooltip: {
-        contents: function(d, defaultTitleFormat, defaultValueFormat, color) {
-          return '<div class="chart-tooltip blue4">' +
-            '<span class="tooltip-label">' + d[0].x + ':</span>' +
-            '<span class="tooltip-value">' + defaultValueFormat(d[0].value) + '</span>' +
-            '</div><div class="chart-tooltip gray3">' +
-            '<span class="tooltip-label">' + d[1].x + ':</span>' +
-            '<span class="tooltip-value">' + defaultValueFormat(d[1].value) + '</span>' +
-            '</div>';
-        }
-      }
-    });
-}
+//     var chartTrend = c3.generate({
+//         bindto: "#chartCompare",
+//         padding: padding,
+//         data: {
+//             x: 'x',
+//             // xFormat: '%Y-%m-%d %H:%M:%S',
+//             columns: [
+//                 ['x', 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+//                 // ['Rate',100.4956545,92.80404871,79.66950966,79.59245596,74.20189819,54.17179711,66.22293085,56.95042699,63.470021,50.68743188],
+//                 ['Rate', 46.15355984, 41.0880911, 36.23073357, 35.51637682, 31.86244299, 24.51238273, 27.52961754, 24.19280834, 27.39899681, 22.24469161, null],
+//             ],
+//             type: 'bar',
+//             labels: {
+//                 format: {
+//                     // 'Rate': d3.format(',.1f')
+//                 }
+//             }
+//         },
+//         legend: {
+//             show: false
+//         },
+//         point: {
+//             show: true,
+//             r: function(d) { if (d.x == 2017) { return 6;} else { return 2.5; } }
+//         },
+//         color: {
+//             pattern: ['#3580A3']
+//         },
+//         axis: {
+//             rotated: true,
+//             y: {
+//                 max: 1,
+//                 min: 0,
+//                 padding: {
+//                     bottom: 0,
+//                     top: 0
+//                 },
+//                 tick: {
+//                     count: 6,
+//                     values: [0, 0.25, 0.50, 0.75, 1],
+//                     format: d3.format('%.0f')
+//                 }
+//             },
+//             x: {
+//                 type: 'category',
+//                 padding: {
+//                     right: 0,
+//                     left: 0
+//                 },
+//                 tick: {
+//                     count: 4,
+//                     values: [2008, 2011, 2015, 2018],
+//                     multiline: false,
+//                 }
+//             }
+//         },
+//         grid: {
+//             focus:{
+//                 show:false
+//               },
+//           },
+//       tooltip: {
+//         contents: function(d, defaultTitleFormat, defaultValueFormat, color) {
+//           return '<div class="chart-tooltip blue4">' +
+//             '<span class="tooltip-label">' + d[0].x + ':</span>' +
+//             '<span class="tooltip-value">' + defaultValueFormat(d[0].value) + '</span>' +
+//             '</div><div class="chart-tooltip gray3">' +
+//             '<span class="tooltip-label">' + d[1].x + ':</span>' +
+//             '<span class="tooltip-value">' + defaultValueFormat(d[1].value) + '</span>' +
+//             '</div>';
+//         }
+//       }
+//     });
+// }
 
-chartCompare();
+// chartCompare();
 
 // function chartArrests() {
 //     var padding = {
